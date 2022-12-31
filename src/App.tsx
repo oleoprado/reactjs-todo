@@ -1,5 +1,6 @@
 import { Header } from './components/Header';
 import { NewTask } from './components/NewTask';
+import { TodoEmpty } from './components/TodoEmpty'
 
 import styles from './App.module.css';
 
@@ -13,12 +14,13 @@ export function App() {
         <NewTask />
         <div className={ styles.taskInProgress}>
           <div className={ styles.createTask}>
-            <strong>Tarfeas Criadas</strong><span>0</span>
+            <strong>Tarefas Criadas</strong><span>0</span>
           </div>
           <div className={ styles.doneTask}>
             <strong>Concluídas</strong><span>0</span>
           </div>
         </div>
+        <TodoEmpty />
       </div>
     </div>
   )
