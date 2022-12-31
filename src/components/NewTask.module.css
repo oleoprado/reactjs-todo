@@ -1,3 +1,38 @@
 .newTaskForm {
-  
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.newTaskForm input[type="text"] {
+  /* flex: 1; */
+  width: 39.87rem;
+  height: 3.375rem;
+  border-radius: 8px;
+  border: 0;
+  background: var(--gray-500);
+  color: var(--gray-300);
+  font-size: 1rem;
+  line-height: 1.4;
+  padding: 1rem;
+}
+
+.newTaskForm button[type="submit"] {
+  width: 5.625rem;
+  height: 3.25rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--blue-dark);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--gray-100);
+}
+
+.containerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
 }
