@@ -30,6 +30,10 @@
   color: var(--gray-100);
 }
 
+.newTaskForm button[type="submit"]:hover {
+  background: var(--blue);
+}
+
 .containerButton {
   display: flex;
   align-items: center;
