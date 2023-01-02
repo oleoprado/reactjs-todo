@@ -28,6 +28,7 @@
   font-size: 0.875rem;
   font-weight: 700;
   color: var(--gray-100);
+  padding: 1rem;
 }
 
 .newTaskForm button[type="submit"]:hover {

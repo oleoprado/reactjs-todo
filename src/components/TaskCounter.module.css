@@ -10,11 +10,11 @@
   line-height: 1.4;
 }
 
-.createTask span {
+.createTask span, .doneTask span {
   margin-left: 8px;
   background: var(--gray-400);
   color: var(--gray-200);
-  padding: 2px 8px 2px 8px;
+  padding: 2px 8px;
   border-radius: 50%;
 }
 
@@ -22,12 +22,4 @@
   color: var(--purple-dark);
   font-size: 0.875rem;
   line-height: 1.4;
-}
-
-.doneTask span {
-  margin-left: 8px;
-  background: var(--gray-400);
-  color: var(--gray-200);
-  padding: 2px 8px 2px 8px;
-  border-radius: 50%;
 }

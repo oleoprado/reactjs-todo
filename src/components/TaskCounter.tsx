@@ -9,6 +9,6 @@ export function TaskCounter() {
           <div className={ styles.doneTask}>
             <strong>Concluídas</strong><span>0</span>
           </div>
-        </div>
+    </div>
   )
 }
