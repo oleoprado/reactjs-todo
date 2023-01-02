@@ -4,17 +4,27 @@ import { FiTrash2 } from 'react-icons/fi';
 import styles from './TodoList.module.css';
 
 interface TodoListProps {
-  content: string;
+  description: string;
+  id: string;
+  isCompleted: boolean;
+  onDeleteTask: (id: string) => void;
 }
 
-export function TodoList({ content }: TodoListProps) {
-  console.log(content);
+export function TodoList({ description, id, onDeleteTask }: TodoListProps) {
+  function handleDeleteTask() {
+    onDeleteTask(id)
+  }
 
   return (
     <div className={styles.container}>
       <input type="checkbox" />
-      <p>{content}</p>
-      <button title="Deletar tarefa"><FiTrash2 /></button>
+      <p>{description}</p>
+      <button
+        title="Deletar tarefa"
+        onClick={ handleDeleteTask}
+      > 
+        <FiTrash2 />
+      </button>
     </div>
   )
 }

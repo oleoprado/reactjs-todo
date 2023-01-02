@@ -1,4 +1,5 @@
 import { v4 as uuidV4 } from 'uuid';
+import { useState, FormEvent, ChangeEvent } from 'react';
 
 import { Header } from './components/Header';
 import { NewTask } from './components/NewTask';
@@ -10,28 +11,50 @@ import styles from './App.module.css';
 
 import './global.css';
 
-const todos = [
-  {
-    id: uuidV4(),
-    content: 'Estudar Jest e todos os testes',
-  },
-  {
-    id: uuidV4(),
-    content: 'Comprar areia para as filhas',
-  },
-  {
-    id: uuidV4(),
-    content: 'Terminar a trilha do nodeJs da rocketseat',
-  }
-];
+interface Task {
+  id: string;
+  description: string;
+  isCompleted: boolean;
+}
 
 export function App() {
+  const [todos, setTodos] = useState<Task[]>([]);
+  const [newTodoText, setNewTodoText] = useState('');
+
+  function handleCreateNewTask(event: FormEvent) {
+    event.preventDefault();
+
+    const newTask = {
+      id: uuidV4(),
+      description: newTodoText,
+      isCompleted: false,
+    }
+    
+    setTodos([...todos, newTask]);
+    setNewTodoText('');   
+  }
+
+  function handleNewTodoTextChange(event: ChangeEvent<HTMLInputElement>) {
+    setNewTodoText(event.target.value);
+  }
+
+  function deleteTask(id: string) {
+    console.log('todos =>',todos);
+    
+    const todosWhitoutDeletedOne = todos.filter(todo => todo.id !== id);
+
+    setTodos(todosWhitoutDeletedOne);
+  }
 
   return (
     <div>
       <Header />
       <main className={styles.wrapper}>
-        <NewTask />
+        <NewTask
+          onAddNewTask={ handleCreateNewTask }
+          newTodoText={newTodoText}
+          onChangeInput={ handleNewTodoTextChange }
+        />
         <TaskCounter />
         {
           (!todos.length) ? (
@@ -40,7 +63,8 @@ export function App() {
             todos.map(todo => {
               return <TodoList
                 key={todo.id}
-                content={todo.content}
+                {...todo}
+                onDeleteTask={ deleteTask }
               />
             })
           )
