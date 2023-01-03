@@ -21,6 +21,13 @@
   box-shadow: 0px 0px 0px 1px var(--purple-dark);
 }
 
+::-webkit-scrollbar {
+  background: var(--gray-400);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-700);
+}
 
 * {
   margin: 0;

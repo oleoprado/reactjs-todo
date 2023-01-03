@@ -57,7 +57,9 @@ export function App() {
           newTodoText={newTodoText}
           onChangeInput={ handleNewTodoTextChange }
         />
-        <TaskCounter />
+        <TaskCounter
+          todos={todos}
+        />
         {
           (!todos.length) ? (
             <TodoEmpty />

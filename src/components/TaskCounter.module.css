@@ -4,22 +4,40 @@
   margin: 4rem 0 1.5rem 0;
 }
 
-.createTask strong {
-  color: var(--blue);
+.createTask, .doneTask {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.createTask strong, .doneTask strong {
   font-size: 0.875rem;
   line-height: 1.4;
 }
 
+.createTask strong {
+  color: var(--blue);
+}
+
 .createTask span, .doneTask span {
-  margin-left: 8px;
-  background: var(--gray-400);
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.4;
   color: var(--gray-200);
-  padding: 2px 8px;
-  border-radius: 50%;
+  background: var(--gray-400);
+  /* margin-left: 8px; */
+}
+
+.createTask span {
+  padding: 0.125rem 0.5rem;
+  border-radius: 64.43rem;
 }
 
 .doneTask strong {
   color: var(--purple-dark);
-  font-size: 0.875rem;
-  line-height: 1.4;
+}
+
+.doneTask span {
+  padding: 0.125rem 0.5rem;
+  border-radius: 64.43rem;
 }

@@ -19,6 +19,15 @@
   padding: 1rem;
 }
 
+.newTaskForm input[type="text"]:focus {
+  color: var(--gray-100);
+}
+
+.newTaskForm input[type="text"]:-webkit-autofill {
+  color: var(--gray-100);
+  background: var(--gray-500);
+}
+
 .newTaskForm button[type="submit"] {
   width: 5.625rem;
   height: 3.25rem;
@@ -35,10 +44,6 @@
 
 .newTaskForm button[type="submit"]:hover {
   background: var(--blue);
-}
-
-.newTaskForm input[type="text"]:focus {
-  color: var(--gray-100);
 }
 
 .containerButton {

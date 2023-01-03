@@ -12,7 +12,7 @@ interface NewTaskProps {
 export function NewTask({ onAddNewTask, newTodoText, onChangeInput }: NewTaskProps) {
 
   return (
-    <form onSubmit={onAddNewTask} className={styles.newTaskForm}>
+    <form onSubmit={onAddNewTask} className={styles.newTaskForm} autoComplete="off">
 
       <input
         type="text"
