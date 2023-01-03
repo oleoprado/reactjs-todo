@@ -12,10 +12,8 @@ interface TaskCounterProps {
 
 export function TaskCounter({ todos }: TaskCounterProps) {
 
-  const completedTasks = todos.reduce((acc, curr) => {
-    if(curr.isCompleted) return acc + 1;
-    return acc;
-  }, 0);
+  const completedTasksAmount = todos.filter(todo => todo.isCompleted === true).length;
+  
   
   return(
     <div className={ styles.taskInProgress}>
@@ -27,7 +25,7 @@ export function TaskCounter({ todos }: TaskCounterProps) {
 
       <div className={ styles.doneTask}>
         <strong>Concluídas</strong>
-        <span>{`${completedTasks} de ${todos.length}`}</span>
+        <span>{`${completedTasksAmount} de ${todos.length}`}</span>
       </div>
 
     </div>
