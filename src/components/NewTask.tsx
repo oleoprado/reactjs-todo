@@ -1,5 +1,5 @@
 import { PlusCircle } from 'phosphor-react';
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent } from 'react';
 
 import styles from './NewTask.module.css';
 
@@ -19,6 +19,7 @@ export function NewTask({ onAddNewTask, newTodoText, onChangeInput }: NewTaskPro
         placeholder="Adicione uma nova tarefa"
         value={newTodoText}
         name="todoText"
+        required
         onChange={onChangeInput}
       />
 
@@ -30,5 +31,5 @@ export function NewTask({ onAddNewTask, newTodoText, onChangeInput }: NewTaskPro
       </button>
 
     </form>
-  )
+  );
 }

@@ -3,7 +3,7 @@ import { useState, FormEvent, ChangeEvent } from 'react';
 
 import { Header } from './components/Header';
 import { NewTask } from './components/NewTask';
-import { TodoEmpty } from './components/TodoEmpty'
+import { TodoEmpty } from './components/TodoEmpty';
 import { TodoList } from './components/TodoList';
 import { TaskCounter } from './components/TaskCounter';
 
@@ -28,7 +28,7 @@ export function App() {
       id: uuidV4(),
       description: newTodoText,
       isCompleted: false,
-    }
+    };
     
     setTodos([...todos, newTask]);
     setNewTodoText('');   
@@ -38,12 +38,14 @@ export function App() {
     setNewTodoText(event.target.value);
   }
 
-  function deleteTask(id: string) {
-    console.log('todos =>',todos);
-    
+  function deleteTask(id: string) {   
     const todosWhitoutDeletedOne = todos.filter(todo => todo.id !== id);
 
     setTodos(todosWhitoutDeletedOne);
+  }
+
+  function updateTasks(tasks: Task[]) {
+    setTodos(tasks);
   }
 
   return (
@@ -60,16 +62,14 @@ export function App() {
           (!todos.length) ? (
             <TodoEmpty />
           ) : (
-            todos.map(todo => {
-              return <TodoList
-                key={todo.id}
-                {...todo}
-                onDeleteTask={ deleteTask }
-              />
-            })
+            <TodoList
+              todos={todos}
+              onDeleteTask={ deleteTask }
+              onUpdateTasks={ updateTasks }
+            />
           )
         }
       </main>
     </div>
-  )
+  );
 }
