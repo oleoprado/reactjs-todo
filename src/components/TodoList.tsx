@@ -30,10 +30,20 @@ export function TodoList({ todos, onDeleteTask, onUpdateTasks }: TodoListProps) 
     onUpdateTasks(updatedListTodos);
   }
 
+
+  const sortTasks = todos.sort((task1: Task, task2: Task) => {
+    if (task1.isCompleted && !task2.isCompleted) {
+      return 1;
+    } else if (!task1.isCompleted && task2.isCompleted) {
+      return -1;
+    }
+    return task1.description.localeCompare(task2.description);
+  });
+
   return(
     <>
       {
-        todos.map(({ id, description, isCompleted}) => {
+        sortTasks.map(({ id, description, isCompleted}) => {
           return (
             <div className={styles.container} key={ id }>
               <input
