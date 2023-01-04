@@ -40,6 +40,10 @@
   margin-top: 0.75rem;
 }
 
-.container input[type="checkbox"] {
-  
+.container input[type="checkbox"]:checked p {
+  color: red;
+}
+
+.done {
+  text-decoration: line-through;
 }
