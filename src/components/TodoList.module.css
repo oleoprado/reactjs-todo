@@ -67,7 +67,7 @@
   background-image: url('../assets/check.svg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 0.65rem;
+  background-size: 0.75rem;
 }
 
 .container input[type="checkbox"]:checked + label:hover {
