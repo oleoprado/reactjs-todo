@@ -52,7 +52,7 @@ export function TodoList({ todos, onDeleteTask, onUpdateTasks }: TodoListProps) 
                 checked={isCompleted}
                 onChange={ () => handleCheckTask(id)}
               />
-              <label htmlFor='checkbox' id={id}/>
+              <label htmlFor={id} />
               <p className={ isCompleted ? styles.done : ''}>{description}</p>
               <button
                 title="Deletar tarefa"

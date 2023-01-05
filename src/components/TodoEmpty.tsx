@@ -1,6 +1,6 @@
 import styles from './TodoEmpty.module.css';
 
-import clipboard from '../assets/clipboard.svg'
+import clipboard from '../assets/clipboard.svg';
 
 export function TodoEmpty() {
   return(
@@ -11,5 +11,5 @@ export function TodoEmpty() {
         <p>Crie tarefas e organize seus itens a fazer</p>
       </div>
     </main>
-  )
+  );
 }

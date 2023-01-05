@@ -9,5 +9,5 @@ export function Header() {
       <img src={ rocketSvg } alt="Foguete do logotipo todo" />
       <img src={ logoTodo } alt="Logotipo do Todo" />
     </header>
-  )
+  );
 }
