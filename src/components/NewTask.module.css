@@ -67,9 +67,14 @@
 
   .newTaskForm button[type="submit"] {
     width: 100%;
+    font-size: 1.2rem;
   }
 
   .newTaskForm input[type="text"] {
     width: 100%;
   }
+
+  /* .containerButton {
+    gap: 0.5rem;
+  } */
 }
