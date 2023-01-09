@@ -1,5 +1,5 @@
-import rocketSvg from '../assets/rocket.svg';
-import logoTodo from '../assets/todo.svg';
+import rocketSvg from '../../assets/rocket.svg';
+import logoTodo from '../../assets/todo.svg';
 
 import styles from './Header.module.css';
 

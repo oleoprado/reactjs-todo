@@ -23,7 +23,7 @@ export function NewTask({ onAddNewTask, newTodoText, onChangeInput }: NewTaskPro
         onChange={onChangeInput}
       />
 
-      <button type="submit">
+      <button type="submit" disabled={ newTodoText.length < 1 ? true : false}>
         <div className={styles.containerButton}>
           Criar
           <PlusCircle size={16} weight="bold" />

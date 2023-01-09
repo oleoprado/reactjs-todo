@@ -63,19 +63,14 @@
 .container input[type="checkbox"]:checked + label {
   background: var(--purple-dark);
   border: none;
+}
 
-  background-image: url('../assets/check.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 0.75rem;
+.container input[type="checkbox"]:checked + label::after {
+  content: "\2713";
+  margin-left: 0.15rem;
 }
 
 .container input[type="checkbox"]:checked + label:hover {
   background: var(--purple);
   border: none;
-
-  background-image: url('../assets/check.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 0.65rem;
 }

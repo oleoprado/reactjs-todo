@@ -44,6 +44,10 @@
   background: var(--blue);
 }
 
+.newTaskForm button[type="submit"]:disabled {
+  cursor: wait;
+}
+
 .containerButton {
   display: flex;
   align-items: center;

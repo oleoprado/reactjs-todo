@@ -2,11 +2,11 @@ import { v4 as uuidV4 } from 'uuid';
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { usePersistedState } from './hooks/usePersistedState';
 
-import { Header } from './components/Header';
-import { NewTask } from './components/NewTask';
-import { TodoEmpty } from './components/TodoEmpty';
-import { TodoList } from './components/TodoList';
-import { TaskCounter } from './components/TaskCounter';
+import { Header } from './components/header/Header';
+import { NewTask } from './components/newTask/NewTask';
+import { TodoEmpty } from './components/todoEmpty/TodoEmpty';
+import { TodoList } from './components/todoList/TodoList';
+import { TaskCounter } from './components/taskCounter/TaskCounter';
 
 import styles from './App.module.css';
 
