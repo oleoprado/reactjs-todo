@@ -10,6 +10,7 @@ interface NewTaskProps {
 }
 
 export function NewTask({ onAddNewTask, newTodoText, onChangeInput }: NewTaskProps) {
+  const isDisabled = newTodoText.length < 1 ? true : false;
 
   return (
     <form onSubmit={onAddNewTask} className={styles.newTaskForm} autoComplete="off">
@@ -23,7 +24,7 @@ export function NewTask({ onAddNewTask, newTodoText, onChangeInput }: NewTaskPro
         onChange={onChangeInput}
       />
 
-      <button type="submit" disabled={ newTodoText.length < 1 ? true : false}>
+      <button type="submit" disabled={ isDisabled }>
         <div className={styles.containerButton}>
           Criar
           <PlusCircle size={16} weight="bold" />
