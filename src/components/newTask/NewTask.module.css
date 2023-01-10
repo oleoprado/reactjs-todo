@@ -58,7 +58,6 @@
 @media (max-width: 425px) {
   html {
     font-size: 87.5%;
-    font-size: 100%;
   }
 
   .newTaskForm {
