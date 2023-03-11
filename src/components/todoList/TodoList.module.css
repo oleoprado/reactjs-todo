@@ -13,6 +13,7 @@
 .container p {
   flex: 1;
   color: var(--gray-100);
+  /* word-break: break-all; */
 }
 
 .container button {
