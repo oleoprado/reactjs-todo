@@ -1,6 +1,8 @@
 .container {
   background: var(--gray-500);
-  height: 4.75rem;
+  /* height: 4.75rem; */
+  max-height: 10rem;
+  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,7 +15,7 @@
 .container p {
   flex: 1;
   color: var(--gray-100);
-  /* word-break: break-all; */
+  word-break: break-all;
 }
 
 .container button {
