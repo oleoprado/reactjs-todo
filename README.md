@@ -17,7 +17,7 @@ O objetivo principal é aplicar e desenvolver os principais conceitos do framewo
 A aplicação é uma simples lista de tarefas (to-do list), onde você pode adicionar, concluir e excluir tarefas.
 Essas tarefas são armazenadas no armazenamento local do navegador, permitindo que você reutilize a aplicação com as tarefas registradas anteriormente, mesmo se você fechar o navegador.
 
-Há uma **[live demo](https://todo-oleoprado.vercel.app)** hospedada na [Vercel](https://vercel.com), onde você pode testá-la.
+Há uma **[live demo](https://todo-oleoprado.vercel.app)** hospedada na Vercel, onde você pode testá-la.
 
 ## Prévia
 
