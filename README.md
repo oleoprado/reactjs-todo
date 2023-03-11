@@ -23,7 +23,7 @@ Há uma **[live demo](https://todo-oleoprado.vercel.app)** hospedada na Vercel, 
 
 | Desktop                            | Desktop                                 | Mobile                              |
 | ---------------------------------- | --------------------------------------- | ----------------------------------- |
-| ![empty](./images/screenshot1.png) | ![with_tasks](./images/screenshot2.png) | ![mobile](./images/screenshot3.png) |
+| ![empty](/src/assets/empty.png) | ![with_tasks](/src/assets/desktop.png) | ![mobile](/src/assets/mobile.png) |
 
 ## Instalação
 
