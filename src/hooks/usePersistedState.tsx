@@ -7,7 +7,7 @@ interface Task {
 }
 
 // TODO: Ajustar tipagem do initialValue
-export function usePersistedState<T>(key: string, initialValue: any) {
+export function usePersistedState<T>(key: string, initialValue: Task[]) {
   const [storedValue, setStoredValue] = React.useState<Task[]>(() => {
     if (typeof window === 'undefined') {
       return initialValue;
