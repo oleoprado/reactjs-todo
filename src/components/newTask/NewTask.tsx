@@ -22,6 +22,7 @@ export function NewTask({ onAddNewTask, newTodoText, onChangeInput }: NewTaskPro
         name="todoText"
         required
         onChange={onChangeInput}
+        maxLength={140}
       />
 
       <button type="submit" disabled={ isDisabled }>
