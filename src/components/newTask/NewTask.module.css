@@ -46,6 +46,8 @@
 
 .newTaskForm button[type="submit"]:disabled {
   cursor: not-allowed;
+  background: var(--disabled);
+  color: var(--gray-350);
 }
 
 .containerButton {
