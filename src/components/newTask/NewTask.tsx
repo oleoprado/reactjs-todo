@@ -10,28 +10,34 @@ interface NewTaskProps {
 }
 
 export function NewTask({ onAddNewTask, newTodoText, onChangeInput }: NewTaskProps) {
-  const isDisabled = newTodoText.length < 1 ? true : false;
 
   return (
-    <form onSubmit={onAddNewTask} className={styles.newTaskForm} autoComplete="off">
+    <div className={styles.newTaskContainer}>
+      <form onSubmit={onAddNewTask} className={styles.newTaskForm} autoComplete="off">
 
-      <input
-        type="text"
-        placeholder="Adicione uma nova tarefa"
-        value={newTodoText}
-        name="todoText"
-        required
-        onChange={onChangeInput}
-        maxLength={140}
-      />
+        <input
+          type="text"
+          placeholder="Adicione uma nova tarefa"
+          value={newTodoText}
+          name="todoText"
+          required
+          onChange={onChangeInput}
+          maxLength={140}
+        />
+ 
+        <button type="submit" disabled={ newTodoText.length < 1 }>
+          <div className={styles.containerButton}>
+            Criar
+            <PlusCircle size={16} weight="bold" />
+          </div>
+        </button>
 
-      <button type="submit" disabled={ isDisabled }>
-        <div className={styles.containerButton}>
-          Criar
-          <PlusCircle size={16} weight="bold" />
-        </div>
-      </button>
+      </form>
 
-    </form>
+      <span className={newTodoText.length >= 140 ? styles.maxCharacters : ''}>
+        {newTodoText.length}/140
+      </span>
+
+    </div>
   );
 }

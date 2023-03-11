@@ -1,3 +1,21 @@
+.newTaskContainer {
+  display: flex;
+  flex-direction: column;
+  gap: .3125rem;
+}
+
+.newTaskContainer > span {
+  width: 35.5rem;
+  text-align: end;
+  font-size: 0.75rem;
+  color: var(--gray-300);
+  font-weight: 600;
+}
+
+.maxCharacters {
+  color: var(--danger)!important;
+}
+
 .newTaskForm {
   display: flex;
   justify-content: center;
@@ -60,6 +78,15 @@
 @media (max-width: 425px) {
   html {
     font-size: 87.5%;
+  }
+
+  .newTaskContainer > span {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    width: 98%;
+    font-size: .5rem;
+
   }
 
   .newTaskForm {
